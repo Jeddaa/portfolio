@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <section className="min-h-screen font-normal bg-slate-800">
+    <section className="min-h-screen font-normal text-white bg-slate-800">
       <Navbar />
       <Homepage />
       <About />
