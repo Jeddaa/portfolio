@@ -1,10 +1,12 @@
 export default function Resume() {
   return (
-    <div className="flex flex-col font-roboto justify-center mx-auto my-0 items-center bg-[#161922] p-10">
+    <div
+      className="flex flex-col font-roboto justify-center mx-auto my-0 items-center bg-[#161922] p-10"
+      id="resume">
       <h2 className="text-center text-5xl text-amber-300">Resume</h2>
-      <p className="mt-3 text-center">
+      {/* <p className="mt-3 text-center">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, id.
-      </p>
+      </p> */}
       <div className="flex gap-8 pt-5 sm:flex-col sx:flex-col w-11/12 lg:w-5/6">
         <div className="flex flex-col sm:w-11/12 sx:w-11/12 w-1/2 gap-2 shadow-lg">
           <div className="flex flex-col gap-3">
