@@ -12,3 +12,22 @@
   width: 150px;
   height: 150px;
 } */
+/* .modal {
+  display: none;
+  flex-direction: column;
+  align-content: center;
+  position: fixed;
+  background-color: #fff;
+  top: 50%;
+  margin: 0 auto;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  max-width: 95vw;
+  height: auto;
+  max-height: 90vh;
+  font-family: Poppins, sans-serif;
+  z-index: 1000;
+  border: 1px solid #dfe1e6;
+  border-radius: 10px;
+  padding: 10px;
+} */

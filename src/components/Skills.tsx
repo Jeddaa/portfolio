@@ -16,7 +16,9 @@ import Css from '../assets/svgs/Css.svg';
 
 export default function Skills() {
   return (
-    <div className="my-10 p-1 flex flex-col gap-5 text-sm text-white">
+    <div
+      className="my-10 p-10 flex flex-col gap-5 text-sm text-white"
+      id="skills">
       <h1 className="text-center text-5xl">Skills</h1>
       <div className="flex my-0 justify-center mx-auto items-center gap-4 flex-wrap">
         <div className="sm:w-32 sm:h-32 w-40 h-40 shadow-lg hover:border rounded-md flex flex-col justify-center items-center gap-1 bg-gray-900 ">
@@ -31,7 +33,7 @@ export default function Skills() {
           <img src={RubyOnRails} className="w-14 h-14" />
           <p>Ruby On Rails</p>
         </div>
-        <div className=" sm:w-32 sm:h-32 w-40 h-40 shadow-lg hover:border rounded-md flex flex-col justify-center items-center gap-1 bg-gray-900 ">
+        <div className=" sk:hidden sm:w-32 sm:h-32 w-40 h-40 shadow-lg hover:border rounded-md flex flex-col justify-center items-center gap-1 bg-gray-900 ">
           <img src={MongoDb} alt="MongoDb" className="w-14 h-14" />
           <p>MongoDb</p>
         </div>
@@ -41,16 +43,16 @@ export default function Skills() {
           <img src={Postgres} alt="MongoDb" className="w-14 h-14" />
           <p>Postgres</p>
         </div>
-
-        <div className="sm:w-32 sm:h-32 w-40 h-40 shadow-lg hover:border rounded-md flex flex-col justify-center items-center gap-1 bg-gray-900 ">
-          {JavascriptSvg()}
-          <p>JavaScript</p>
-        </div>
         <div className="sm:w-32 sm:h-32 w-40 h-40 shadow-lg hover:border bg-amber-300 rounded-md flex flex-col justify-center items-center gap-1 ">
           <img src={Git} className="w-14 h-14" />
           <p className="text-center leading-4">Git Source Control</p>
         </div>
         <div className="sm:w-32 sm:h-32 w-40 h-40 shadow-lg hover:border rounded-md flex flex-col justify-center items-center gap-1 bg-gray-900 ">
+          {JavascriptSvg()}
+          <p>JavaScript</p>
+        </div>
+
+        <div className="sk:hidden sm:w-32 sm:h-32 w-40 h-40 shadow-lg hover:border rounded-md flex flex-col justify-center items-center gap-1 bg-gray-900 ">
           {PythonSvg()}
           <p>Python</p>
         </div>
@@ -70,6 +72,18 @@ export default function Skills() {
           <p className="text-center leading-5">Flask Microweb Framework</p>
         </div>
       </div>
+      <div className="hidden sk:flex my-0 justify-center mx-auto items-center gap-4 flex-wrap ">
+        <div className="sm:w-32 sm:h-32 w-40 h-40 shadow-lg hover:border rounded-md flex flex-col justify-center items-center gap-1 bg-gray-900 ">
+          {PythonSvg()}
+          <p>Python</p>
+        </div>
+
+        <div className=" sm:w-32 sm:h-32 w-40 h-40 shadow-lg hover:border rounded-md flex flex-col justify-center items-center gap-1 bg-gray-900 ">
+          <img src={MongoDb} alt="MongoDb" className="w-14 h-14" />
+          <p>MongoDb</p>
+        </div>
+      </div>
+
       <div className="flex my-0 justify-center mx-auto items-center gap-4 flex-wrap">
         <div className="sm:w-32 sm:h-32 w-40 h-40 shadow-lg hover:border rounded-md flex flex-col justify-center items-center gap-1 bg-gray-900">
           <div className="flex gap-2">
