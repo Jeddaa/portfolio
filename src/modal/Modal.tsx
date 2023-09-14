@@ -1,14 +1,17 @@
+//function not in use as multiple modal is not required. can only have one modal instance so i had to create a componnet called renderModal (check this folder) and have only one modal instance in the featured work.
 import { AiFillCloseCircle } from 'react-icons/ai';
 import Modal from 'react-modal';
 
 const MyModalContent = ({
-  bookstore,
+  img,
+  text,
   isOpen,
   closeModal,
   demo,
   stack
 }: {
-  bookstore: string;
+  img: string;
+  text: string;
   isOpen: boolean;
   closeModal: () => void;
   demo: boolean;
@@ -23,16 +26,11 @@ const MyModalContent = ({
       <div className="  ">
         <div className="flex flex-col gap-3 w-full">
           <div className="w-full">
-            <img src={bookstore} className="object-cover" />
+            <img src={img} className="object-cover" />
           </div>
           <div className="flex flex-col gap-3">
             <div className="flex flex-col lgm:flex-row lgm:gap-5 gap-3 w-full">
-              <p className="text-justify p-1 lgm:w-3/4">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam,
-                debitis! Lorem ipsum dolor sit, amet consectetur adipisicing
-                elit. Accusamus possimus quibusdam dolor aliquam doloremque
-                eaque quod? Natus animi recusandae consectetur!
-              </p>
+              <p className="text-justify p-1 lgm:w-3/4">{text}</p>
               <div className="flex justify-start items-start gap-3 lgm:w-1/3">
                 {stack.map((item, index) => {
                   return (
