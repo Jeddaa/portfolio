@@ -1,7 +1,7 @@
 import { BsGithub } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BiLogoLinkedin } from 'react-icons/bi';
-import MyPDF from '/Users/fatiha/portfolio/portfolio-Page/src/assets/Fatihah Oduwole CV.pdf';
+import MyPDF from '../assets/Fatihah Oduwole CV.pdf';
 
 export default function Mainpage() {
   return (
