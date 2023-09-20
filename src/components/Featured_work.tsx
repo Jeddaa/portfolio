@@ -126,7 +126,7 @@ const FeaturedWork = () => {
         overlayClassName="fixed inset-0 bg-[c1c7d0] opacity-100 backdrop-blur-xl"
         onAfterOpen={() => (document.body.style.overflow = 'hidden')}
         onAfterClose={() => (document.body.style.overflow = 'unset')}
-        className="absolute mt-24 max-w-[80vw] lgm:max-w-[65vw]  p-5 overflow-y-scroll z-50 h-[50vh] max-h-[80vh] mx-auto top-0 left-0 right-0 bottom-0 bg-gray-900 border  rounded-lg border-slate-700 shadow-lg text-gray-50">
+        className="absolute mt-24 max-w-[80vw] lgm:max-w-[65vw]  p-5 overflow-y-scroll z-50 h-fit max-h-[80vh] mx-auto top-0 left-0 right-0 bottom-0 bg-gray-900 border  rounded-lg border-slate-700 shadow-lg text-gray-50">
         <div>
           <Rendermodal
             img={allWork[SelectedPost].img}
