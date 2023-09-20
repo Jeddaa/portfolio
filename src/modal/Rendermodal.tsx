@@ -24,7 +24,7 @@ const Rendermodal = ({
       <div className="flex justify-between">
         <div className=" flex flex-col mt-1 gap-4">
           <h1 className="text-3xl">{title}</h1>
-          <div className="flex justify-start gap-3 mb-2 break-all">
+          <div className="flex justify-start gap-3 mb-2 flex-wrap">
             {stack.map((item, index) => {
               return (
                 <button
