@@ -1,0 +1,11 @@
+Xifeng Guo, Qiannan Zhao, Di Zheng, Yi Ning, Ye Gao,
+A short-term load forecasting model of multi-scale CNN-LSTM hybrid neural network considering the real-time electricity price,
+Energy Reports,
+Volume 6, Supplement 9,
+2020,
+Pages 1046-1053,
+ISSN 2352-4847,
+https://doi.org/10.1016/j.egyr.2020.11.078.
+(https://www.sciencedirect.com/science/article/pii/S2352484720315031)
+Abstract: With the innovation of power market and the development of energy intelligent technology, load forecasting technology as an important direction of power system development plays an important role in power system planning. Aiming at the problem of insufficient feature extraction and low prediction accuracy, a short-term load forecasting model of multi-scale CNN-LSTM hybrid neural network considering the real-time electricity price is proposed in this paper. Firstly, the maximum information coefficient method is used to analyze the correlation between electricity price and load. The historical load, real-time electricity price, weather and other factors are constructed in the form of continuous feature maps as input. Secondly, the Convolutional Neural Network (CNN) is used to cascade the shallower and deeper feature from four different scales. Feature vectors of different scales are fused as the input of Long Short Term Memory (LSTM) network , and LSTM network is used for short-term load forecasting. Finally, the proposed method is used to predict the real load data of a city in Liaoning Province. The experimental results show that the proposed method has higher prediction accuracy than the standard LSTM model, Support Vector Machine (SVM) model, Random Forest (RF) model and Auto Regressive Integrated Moving Average (ARIMA) model. Besides, the prediction results show that this study has high application value and provides a new way for the development of power load forecasting.
+Keywords: Short-term load forecasting; Multi-scale feature extraction; Feature fusion; Multi-scale CNN-LSTM

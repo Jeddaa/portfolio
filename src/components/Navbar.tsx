@@ -1,6 +1,6 @@
 // import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo1.png';
 import { useState } from 'react';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import Scroll from 'react-scroll';
@@ -17,9 +17,11 @@ export default function Navbar() {
     }
   };
   return (
-    <nav className="flex font-roboto font-bold justify-between py-4 sm:px-5 px-7 text-xs items-start sticky top-0 bg-slate-800 w-full h-14">
+    <nav className="flex font-roboto font-bold justify-between py-4 sm:px-5 px-7 z-30 text-xs items-start sticky top-0 bg-slate-800 w-full h-14">
       <div className="w-20 h-16 sm:-ml-1 overflow-hidden">
-        <img src={logo} className="object-contain" alt="LOGO" />
+        <Link activeClass="active" smooth spy to="home">
+          <img src={logo} className="object-contain" alt="LOGO" />
+        </Link>
       </div>
       <div className="lg:hidden" onClick={toggleHamburger}>
         <GiHamburgerMenu

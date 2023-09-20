@@ -7,7 +7,7 @@ import expense from '../assets/projects/expense-app.png';
 import spa from '../assets/projects/spa-1.png';
 import Modal from 'react-modal';
 import Rendermodal from '../modal/Rendermodal';
-import { AiFillCloseCircle } from 'react-icons/ai';
+import { AiFillCloseCircle, AiOutlineArrowRight } from 'react-icons/ai';
 
 const FeaturedWork = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -82,23 +82,39 @@ const FeaturedWork = () => {
   ];
 
   return (
-    <div className=" p-10" id="portfolio">
-      <h1 className="text-center text-5xl text-amber-300">Featured Work</h1>
-      <div className="grid lgm:grid-cols-3 sm:grid-cols-1 grid-cols-2 py-7 mx-auto my-0 gap-4 w-9/12">
+    <div
+      className=" flex flex-col items-center gap-10 p-10 mx-auto my-0 text-gray-50 w-full"
+      id="portfolio">
+      <h1 className="text-center text-5xl text-amber-300">Recent Works</h1>
+      <div className="grid lgm:grid-cols-2 grid-cols-1 gap-x-8 gap-y-6 ">
         {allWork.map((work, index) => {
           return (
-            <div key={work.id} className="flex flex-col gap-1">
-              <img src={work.img} className="h-44 w-44 lgm:w-72 lgm:h-72" />
+            <div
+              key={work.id}
+              className="flex flex-col gap-3 border border-slate-700 p-2 rounded-md shadow-lg justify-center items-center h-96 w-[26rem] fx:w-60 sxx:w-80 sx:w-80">
+              <img
+                src={work.img}
+                className="h-1/2 bg-white w-5/6 fx:w-full px-4"
+              />
               <h3 className="text-xl">{work.title}</h3>
-              <div className="flex gap-2 text-sm text-amber-300">
-                {work.stack.map((lang) => {
-                  return <p>{lang}</p>;
+              <div className="flex justify-center gap-2 text-sm text-amber-300 break-words">
+                {work.stack.slice(0, 3).map((lang) => {
+                  return (
+                    <button
+                      key={index}
+                      className=" text-center border border-slate-700 shadow-lg min-w-fit rounded-md p-1.5 text-sm bg-slate-700"
+                      disabled
+                      type="button">
+                      {lang}
+                    </button>
+                  );
                 })}
               </div>
               <button
-                className="border p-2 rounded-lg w-fit cursor-pointer text-start"
+                className=" flex gap-2 border p-2 rounded-md w-fit cursor-pointer text-start hover:bg-slate-500"
                 onClick={() => openModal(index)}>
                 See More
+                <AiOutlineArrowRight className="mt-1" />
               </button>
             </div>
           );
@@ -108,11 +124,14 @@ const FeaturedWork = () => {
         isOpen={isModalOpen}
         onRequestClose={closeModal}
         overlayClassName="fixed inset-0 bg-[c1c7d0] opacity-100 backdrop-blur-xl"
-        className="absolute -mt-10 mx-auto top-[15%] left-[10%] -translate-x-4 -translate-y-4 p-10 border rounded-lg overflow-y-scroll bg-slate-800 border-slate-700 shadow-lg max-w-[95vw] h-auto max-h-[90vh] lgm:w-[70vw] text-white lgm:bottom-[10%]">
+        onAfterOpen={() => (document.body.style.overflow = 'hidden')}
+        onAfterClose={() => (document.body.style.overflow = 'unset')}
+        className="absolute mt-24 max-w-[80vw] lgm:max-w-[65vw]  p-5 overflow-y-scroll z-50 h-[50vh] max-h-[80vh] mx-auto top-0 left-0 right-0 bottom-0 bg-gray-900 border  rounded-lg border-slate-700 shadow-lg text-gray-50">
         <div>
           <Rendermodal
             img={allWork[SelectedPost].img}
             text={allWork[SelectedPost].text}
+            title={allWork[SelectedPost].title}
             demo={allWork[SelectedPost].demo}
             github={allWork[SelectedPost].github}
             stack={allWork[SelectedPost].stack}

@@ -1,22 +1,32 @@
 import { BsGithub } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BiLogoLinkedin } from 'react-icons/bi';
-import MyPDF from '../assets/Fatihah Oduwole CV.pdf';
+import MyPDF from '../assets/demo cv.txt';
+import styled, { keyframes } from 'styled-components';
+import { bounce } from 'react-animations';
 
 export default function Mainpage() {
+  const Bounce = styled.div`
+    animation: 5s ${keyframes`${bounce}`} infinite;
+    z-index: 0;
+  `;
   return (
-    <div className="grid place-items-center py-24 px-[10%] mx-auto my-0 ">
+    <div
+      className="grid place-items-center py-24 px-[10%] mx-auto my-0 "
+      id="home">
       <div className="flex flex-col w-[90%]">
-        <h3 className="text-xl">--Hello</h3>
-        <h1 className="text-5xl sm:text-start sx:text-start md:text-4xl py-2 text-teal-600 font-medium">
-          I'M <span className="text-amber-300">Fatihah Oduwole,</span>
-        </h1>
+        <Bounce>
+          <h3 className="text-xl">--Hello</h3>
+          <h1 className="text-5xl sm:text-start sx:text-start md:text-4xl py-2 text-teal-600 font-medium">
+            I'M <span className="text-amber-300">Fatihah Oduwole,</span>
+          </h1>
+        </Bounce>
         <p className="text-md py-5 text-grey-800">
           a software Engineer who is eager to contribute to your team and take
           on new challenges because I have a strong understanding of coding
           concepts and a dedication to providing value.
         </p>
-        <button className="text-justify border w-fit p-2 mt-5 rounded-md hover:text-amber-300">
+        <button className="animate-pulse text-justify border w-fit p-2 mt-5 rounded-md hover:text-amber-300">
           <a href={MyPDF} download="FatihahOduwole.pdf">
             Download CV
           </a>

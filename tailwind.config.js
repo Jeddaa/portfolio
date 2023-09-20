@@ -11,9 +11,9 @@ export default {
     screens: {
       fx: { max: '394px' },
       fxx: { min: '200px' },
+      sxx: { min: '395px', max: '415px' },
       sm: { min: '200px', max: '415px' },
       sx: { min: '416px', max: '570px' },
-      // => @media (min-width: 640px and max-width: 767px) { ... }
       md: { min: '571px', max: '625px' },
       mdx: { min: '626px', max: '767px' },
       sk: { min: '592px', max: '767px' },
@@ -23,4 +23,3 @@ export default {
   },
   plugins: []
 };
-
